@@ -13,24 +13,20 @@ function updatePrice() {
     let checkDiv = document.getElementById("checkboxes");
 
     if (select.value == "1") {
-        // Для первого элемента скрываем чекбоксы и показываем радиокнопки.
         checkDiv.style.display = "none";
         radioDiv.style.display = "none";
         resetRadios();
         resetCheckboxes();
     } else if (select.value == "2") {
-        // Для второго элемента показываем радиокнопки, скрываем чекбоксы.
         checkDiv.style.display = "none";
         radioDiv.style.display = "block";
         resetCheckboxes();
     } else {
-        // Для третьего элемента скрываем радиокнопки и показываем чекбоксы.
         checkDiv.style.display = "block";
         radioDiv.style.display = "none";
         resetRadios();
     }
 
-    // Смотрим какая товарная опция выбрана.
     let radios = document.getElementsByName("prodOptions");
     radios.forEach(function(radio) {
       if (radio.checked) {
@@ -41,7 +37,6 @@ function updatePrice() {
       }
     });
     
-    // Смотрим какие товарные свойства выбраны.
     let checkboxes = document.querySelectorAll("#checkboxes input");
     checkboxes.forEach(function(checkbox) {
       if (checkbox.checked) {
@@ -106,7 +101,6 @@ function resetCheckboxes() {
       });
     });
 
-    // Обработчик изменения количества
     let inputs = document.querySelectorAll("input");
     inputs.forEach(function(input) {
         input.addEventListener("change", function(event) {
