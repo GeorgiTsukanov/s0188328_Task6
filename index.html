@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Задание №6</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  
+  
+  <div id="prodPrice"></div>
+  <form>
+    <label for="amount">Кол-во: </label>
+    <input
+		id="amount"
+        min="1"
+		value="1"
+		placeholder="Введите количество товара"
+        type="number"
+        required
+    />
+    </br>
+    Выберите тип товара:
+    <select name="prodType">
+      <option value="1">Кружка (200 мл)</option>
+      <option value="2">Шкаф</option>
+      <option value="3">Шуруповерт</option>
+    </select>
+    <div id="radios">
+      <div class="Column">
+        <label><input type="radio" name="prodOptions" value="option1"> Самовывоз</label>
+        <label><input type="radio" name="prodOptions" value="option2"> Доставка</label>
+        <label><input type="radio" name="prodOptions" value="option3"> Доставка и сборка</label>
+      </div>
+    </div>
+    <div id="checkboxes">
+      <div class="Column">
+        <label><input type="checkbox" name="prop1"> Дополнительный аккамулятор</label>
+        <label><input type="checkbox" name="prop2"> Набор бит</label>
+      </div>
+    </div>
+    </br>
+    <div id="price">
+        <label>Стоимость: </label>
+        <label id="res"></label>
+    </div>
+  </form>
+  
+  </body>
+  <script src="main.js"></script>
+</html>
