@@ -1,5 +1,4 @@
 function updatePrice() {
-    // Находим select по имени в DOM.
     let s = document.getElementsByName("prodType");
     let select = s[0];
     let price = 0;
